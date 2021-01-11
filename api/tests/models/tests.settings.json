@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "name": "tests",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "preguntas": {
+      "via": "tests",
+      "collection": "pregunta",
+      "dominant": true
+    },
+    "usuarios": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "permisos": {
+      "via": "tests",
+      "collection": "permiso"
+    }
+  }
+}

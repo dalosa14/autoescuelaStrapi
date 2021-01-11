@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_relaciones_acertadas",
+  "info": {
+    "name": "acertadas",
+    "icon": "anchor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "elegido": {
+      "type": "integer"
+    }
+  }
+}

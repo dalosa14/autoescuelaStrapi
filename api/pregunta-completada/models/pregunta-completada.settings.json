@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pregunta_completadas",
+  "info": {
+    "name": "PreguntaCompletada",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "pregunta": {
+      "via": "pregunta_completadas",
+      "model": "pregunta"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pregunta_completadas"
+    },
+    "opcion": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pregunta-completadas",
+      "handler": "pregunta-completada.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pregunta-completadas/count",
+      "handler": "pregunta-completada.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pregunta-completadas/:id",
+      "handler": "pregunta-completada.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pregunta-completadas",
+      "handler": "pregunta-completada.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pregunta-completadas/:id",
+      "handler": "pregunta-completada.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pregunta-completadas/:id",
+      "handler": "pregunta-completada.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

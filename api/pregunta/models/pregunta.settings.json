@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preguntas",
+  "info": {
+    "name": "pregunta",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "pregunta": {
+      "type": "string"
+    },
+    "correcto": {
+      "type": "integer"
+    },
+    "correcion": {
+      "type": "text"
+    },
+    "tests": {
+      "collection": "tests",
+      "via": "preguntas"
+    },
+    "opcion1": {
+      "type": "string"
+    },
+    "opcion2": {
+      "type": "string"
+    },
+    "opcion3": {
+      "type": "string"
+    },
+    "opcion4": {
+      "type": "string"
+    },
+    "imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "pregunta_completadas": {
+      "collection": "pregunta-completada",
+      "via": "pregunta"
+    },
+    "usuarios": {
+      "type": "component",
+      "repeatable": true,
+      "component": "relaciones.acertadas"
+    }
+  }
+}

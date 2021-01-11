@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "permisos",
+  "info": {
+    "name": "permiso",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "permisos"
+    },
+    "tests": {
+      "collection": "tests",
+      "via": "permisos",
+      "dominant": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
